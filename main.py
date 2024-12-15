@@ -39,7 +39,9 @@ morse_code = {
     ",": "__..__",
     "?": "..__..",
     "/": "_.._.",
-    "@": ".__._."
+    "@": ".__._.",
+    " ": "",
+    "":"  "
 }
 state = input("cypher or decypher?")
 state = state.lower()
@@ -59,6 +61,8 @@ elif state == "decypher":
     morse_word = user.split(" ")
     for i in morse_word:
         translated_word.append(reversed_morse_dic[i])
+        print(translated_word)
+        print(reversed_morse_dic)
     deciphered_word = "".join(translated_word)
     print(deciphered_word)
 else:
